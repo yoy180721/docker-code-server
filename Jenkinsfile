@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    label 'X86-64-MULTI'
-  }
+  agent any
   options {
     buildDiscarder(logRotator(numToKeepStr: '10', daysToKeepStr: '60'))
     parallelsAlwaysFailFast()
